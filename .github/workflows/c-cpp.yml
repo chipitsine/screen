@@ -17,7 +17,7 @@ jobs:
     - name: go
       run: |
         apt-get update -y
-        apt -y install libpam0g-dev sudo
+        apt -y install libpam0g-dev sudo autoconf
         cd src
         autoreconf -iv
         ./configure
