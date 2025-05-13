@@ -14,6 +14,8 @@ jobs:
     - uses: actions/checkout@v4
     - name: go
       run: |
+        sudo apt-get update -y
+        sudo apt -y install libpam0g-dev
         cd src
         autoreconf -iv
         ./configure
