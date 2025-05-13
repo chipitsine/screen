@@ -8,16 +8,14 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-    container:
-      image: ubuntu:20.04
+    runs-on: ubuntu-22
 
     steps:
     - uses: actions/checkout@v4
     - name: go
       run: |
-        apt-get update -y
-        apt -y install libpam0g-dev sudo autoconf
+        #sudo apt-get update -y
+        #sudo apt -y install libpam0g-dev 
         cd src
         autoreconf -iv
         ./configure
